@@ -47,6 +47,9 @@ public class ReservationService {
                 if (p.getFechafinal()!=null){
                     q.get().setFechafinal(p.getFechafinal());
                 }
+                if (p.getCategory()!=null){
+                    q.get().setCategory(p.getCategory());
+                }
                 reservationRepository.save(q.get());
                 return q.get();
             }else {

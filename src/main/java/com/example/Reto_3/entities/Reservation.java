@@ -20,7 +20,7 @@ public class Reservation implements Serializable {
 
     @ManyToOne
     @JoinColumn(name = "id")
-    @JsonIgnoreProperties("resrvation")
+    @JsonIgnoreProperties("reservation")
     private Category category;
 
     public Integer getId() {
