@@ -8,17 +8,17 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(faltaapi"/api/Client")
+@RequestMapping("/api/Client")
 public class ClientController {
 
     @Autowired
     private ClientService clientService;
 
-    @GetMapping(faltaapi"/all")
+    @GetMapping("/all")
     public List<Client> getAll(){
         return clientService.getAll();
     }
-    @PostMapping(faltaapi"/save")
+    @PostMapping("/save")
     public Client save(@RequestBody Client p){
         return clientService.save(p);
     }

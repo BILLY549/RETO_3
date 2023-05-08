@@ -8,17 +8,17 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(faltaapi"/api/Product")
+@RequestMapping("/api/Product")
 public class ProductController {
 
     @Autowired
     private ProductService productService;
 
-    @GetMapping(faltaapi"/all")
+    @GetMapping("/all")
     public List<Product> getAll(){
         return productService.getAll();
     }
-    @PostMapping(faltaapi"/save")
+    @PostMapping("/save")
     public Product save(@RequestBody Product p){
         return productService.save(p);
     }

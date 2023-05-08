@@ -8,17 +8,17 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(faltaapi"/api/Library")
+@RequestMapping("/api/Library")
 public class LibraryController {
 
     @Autowired
     private LibraryService libraryService;
 
-    @GetMapping(faltaapi"/all")
+    @GetMapping("/all")
     public List<Library> getAll(){
         return libraryService.getAll();
     }
-    @PostMapping(faltaapi"/save")
+    @PostMapping("/save")
     public Library save(@RequestBody Library p){
         return libraryService.save(p);
     }

@@ -8,16 +8,16 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(faltaapi"/api/Category")
+@RequestMapping("/api/Category")
 public class CategoryController {
     @Autowired
     private CategoryService categoryService;
 
-    @GetMapping(faltaapi"/all")
+    @GetMapping("/all")
     public List<Category> getAll(){
         return categoryService.getAll();
     }
-    @PostMapping(faltaapi"/save")
+    @PostMapping("/save")
     public Category save(@RequestBody Category p){
         return categoryService.save(p);
     }

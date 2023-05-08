@@ -8,17 +8,17 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(faltaapi"/api/Reservation")
+@RequestMapping("/api/Reservation")
 public class ReservationController {
 
     @Autowired
     private ReservationService reservationService;
 
-    @GetMapping(faltaapi"/all")
+    @GetMapping("/all")
     public List<Reservation> getAll(){
         return reservationService.getAll();
     }
-    @PostMapping(faltaapi"/save")
+    @PostMapping("/save")
     public Reservation save(@RequestBody Reservation p){
         return reservationService.save(p);
     }
