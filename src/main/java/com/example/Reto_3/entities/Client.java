@@ -2,8 +2,8 @@ package com.example.Reto_3.entities;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import jakarta.persistence.*;
-
 import java.io.Serializable;
+import java.util.List;
 
 @Entity
 @Table(name = "client")
@@ -14,8 +14,12 @@ public class Client implements Serializable {
     private Integer idClient;
     private String name;
     private Integer age;
-    private Integer password;
-    private Integer email;
+    private String password;
+    private String email;
+
+    /*@OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "client")
+    @JsonIgnoreProperties("client")
+    private List<Library> libs;*/
 
     public Integer getIdClient() {
         return idClient;
@@ -41,19 +45,19 @@ public class Client implements Serializable {
         this.age = age;
     }
 
-    public Integer getPassword() {
+    public String getPassword() {
         return password;
     }
 
-    public void setPassword(Integer password) {
+    public void setPassword(String password) {
         this.password = password;
     }
 
-    public Integer getEmail() {
+    public String getEmail() {
         return email;
     }
 
-    public void setEmail(Integer email) {
+    public void setEmail(String email) {
         this.email = email;
     }
 }
